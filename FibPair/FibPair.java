@@ -53,7 +53,8 @@ public class FibPair {
         the small number is the the old big number
      */
     private static Pair nextPairAfter( Pair previousPair) {
-	Pair<Integer> nextPair = new Pair (previousPair.getFirst(), (int) previousPair.getFirst() + (int) previousPair.getSecond());
+	Pair<Integer> nextPair = new Pair (previousPair.getFirst(),
+					  (int) previousPair.getFirst() + (int) previousPair.getSecond());
         return nextPair;
     }
 
