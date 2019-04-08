@@ -34,12 +34,11 @@ public class FibPair {
                                 , String expect
                                 ) {
 
-        // code here to make a pair from the params
-
+        Pair<Integer> previousPair = new Pair (smaller, bigger);
         System.out.println(
             "The pair after "
-          // + ?? the pair you made
-          // + " is " + nextPairAfter( ?? the pair you made)
+	    + previousPair
+          + " is " + nextPairAfter( previousPair)
           + " ...expecting " + expect
           + System.lineSeparator());
      }
@@ -53,8 +52,9 @@ public class FibPair {
         the big number is the sum of the given pair
         the small number is the the old big number
      */
-    private static ?? nextPairAfter( ??) {
-        return ?? the next pair;
+    private static Pair nextPairAfter( Pair previousPair) {
+	Pair<Integer> nextPair = new Pair (previousPair.getFirst(), (int) previousPair.getFirst() + (int) previousPair.getSecond());
+        return nextPair;
     }
 
 
