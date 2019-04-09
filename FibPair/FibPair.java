@@ -38,9 +38,9 @@ public class FibPair {
         System.out.println(
             "The pair after "
 	    + previousPair
-          + " is " + nextPairAfter( previousPair)
-          + " ...expecting " + expect
-          + System.lineSeparator());
+	    + " is " + nextPairAfter( previousPair)
+	    + " ...expecting " + expect
+	    + System.lineSeparator());
      }
 
 
@@ -53,7 +53,7 @@ public class FibPair {
         the small number is the the old big number
      */
     private static Pair nextPairAfter( Pair previousPair) {
-	Pair<Integer> nextPair = new Pair (previousPair.getFirst(),
+	Pair<Integer> nextPair = new Pair (previousPair.getSecond(),
 					  (int) previousPair.getFirst() + (int) previousPair.getSecond());
         return nextPair;
     }
